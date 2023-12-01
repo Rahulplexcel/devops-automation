@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        maven 'Maven-3.9.5'
+        maven 'maven_3.9.5'
     }
     stages{
         stage('Build Maven'){
@@ -28,12 +28,12 @@ pipeline {
                 }
             }
         }
-       // stage('Deploy to k8s'){
-         //   steps{
-           //     script{
-             //       kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8sconfigpwd')
-               // }
-            //}
-        //}
+        stage('Deploy to k8s'){
+           steps{
+                script{
+                    kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8sconfigpwd')
+                }
+            }
+        }
     }
 }
