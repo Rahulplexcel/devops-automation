@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools{
-        maven 'maven_3.9.5'
+        maven 'maven_3_9_5'
     }
     stages{
         stage('Build Maven'){
@@ -10,7 +10,7 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage('Build docker image'){
+       /* stage('Build docker image'){
             steps{
                 script{
                     sh 'docker build -t javatechie/devops-integration .'
@@ -34,6 +34,6 @@ pipeline {
                     kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8sconfigpwd')
                 }
             }
-        }
+        } */
     }
 }
