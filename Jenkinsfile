@@ -20,7 +20,7 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                   withCredentials([string(credentialsId: 'dockerhub-pwd',variable: 'dockerhubpwd')]) {
+                   withCredentials([string(credentialsId: "Plexcel@123",variable: 'dockerhubpwd')]) {
                    bat "docker login -u rahulnshanbhag -p Plexcel@123"
 
 }
