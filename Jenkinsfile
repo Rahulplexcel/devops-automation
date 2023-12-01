@@ -1,19 +1,19 @@
 pipeline {
     agent any
-   /* tools{
+    tools{
         maven 'maven-3.9.5'
-    } */
+    } 
     stages{
         stage('Build Maven'){
             steps{
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Java-Techie-jt/devops-automation']]])
-                sh 'mvn clean install'
+                cd 'mvn clean install'
             }
         }
        /* stage('Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t javatechie/devops-integration .'
+                    cd 'docker build -t javatechie/devops-integration .'
                 }
             }
         }
