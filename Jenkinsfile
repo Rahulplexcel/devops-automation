@@ -6,14 +6,14 @@ pipeline {
     stages{
         stage('Build Maven'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Java-Techie-jt/devops-automation']]])
-                cd 'mvn clean install'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Rahulplexcel/devops-automation']]])
+                sh 'mvn clean install'
             }
         }
        /* stage('Build docker image'){
             steps{
                 script{
-                    cd 'docker build -t javatechie/devops-integration .'
+                    sh 'docker build -t javatechie/devops-integration .'
                 }
             }
         }
