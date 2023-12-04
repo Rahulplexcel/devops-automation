@@ -21,7 +21,7 @@ pipeline {
             steps{
                 script{
                    withCredentials([string(credentialsId:'dockerhubpwd',variable: 'dockerhubpwd')]) {
-                   bat "docker login -u rahulnshanbhag -p Plexcel@123"
+                   bat "docker login -u rahulnshanbhag -p ${dockerhubpwd}"
 
 }
                    bat "docker tag 8ae7c477521e javatechie/devops-automation:latest"
