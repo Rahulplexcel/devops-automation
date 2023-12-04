@@ -24,8 +24,8 @@ pipeline {
                    bat "docker login -u rahulnshanbhag -p ${dockerhubpwd}"
 
 }
-                  // bat "docker tag  javatechie/devops-automation:latest"
-                   bat "docker push javatechie/devops-integration:latest"
+                   bat "docker tag  javatechie/devops-integration:latest rahulnshanbhag/devops-integration:myfirstpush"
+                   bat "docker push rahulnshanbhag/devops-integration:myfirstpush"
                 }
             }
         }
