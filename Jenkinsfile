@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    bat 'docker build -t javatechie/devops-automation .'
+                    bat 'docker build -t javatechie/devops-integration .'
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline {
 
 }
                   // bat "docker tag  javatechie/devops-automation:latest"
-                   bat "docker push javatechie/devops-automation:latest"
+                   bat "docker push javatechie/devops-integration:latest"
                 }
             }
         }
