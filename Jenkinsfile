@@ -24,7 +24,7 @@ pipeline {
                    bat "docker login -u rahulnshanbhag -p Plexcel@123"
 
 }
-                   bat "docker push rahulnshanbhag/devops-automation"
+                   bat "docker push javatechie/devops-automation"
                 }
             }
         }
