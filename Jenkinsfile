@@ -24,6 +24,7 @@ pipeline {
                    bat "docker login -u rahulnshanbhag -p Plexcel@123"
 
 }
+                   bat "docker tag 8ae7c477521e javatechie/devops-automation:latest"
                    bat "docker push javatechie/devops-automation:latest"
                 }
             }
